@@ -103,7 +103,6 @@
 
 
         <div class="table-container">
-
             <table>
 
                 <thead>
