@@ -7,7 +7,7 @@
 
     <title>Enrollment | FEU Student Portal</title>
 
-   <link rel="stylesheet" href="<?= base_url('style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('style.css') ?>">
 
 </head>
 
@@ -25,7 +25,6 @@
         </div>
 
     </div>
-
 
     <nav>
 
@@ -48,215 +47,141 @@
 
     <section class="page-header">
 
-        <span class="section-label">ENROLLMENT</span>
+        <span class="section-label">
+            STUDENT SERVICES
+        </span>
 
-        <h1>Prepare your subjects.</h1>
+        <h1>Enrollment</h1>
 
         <p>
-            Review the subjects available for your current semester
-            before completing your enrollment.
+            Review the available subjects for the current semester.
+            This page uses a static PHP array as a temporary data source.
         </p>
 
     </section>
 
 
-    <section class="enrollment-summary">
+    <section class="section">
 
-        <div>
+        <div class="profile-summary">
 
-            <small>STUDENT</small>
+            <div>
+                <strong>Program</strong>
+                <p>BS Information Technology</p>
+            </div>
 
-            <strong>Lee Andrei A. Flores</strong>
+            <div>
+                <strong>Year Level</strong>
+                <p>3rd Year</p>
+            </div>
 
-        </div>
-
-
-        <div>
-
-            <small>PROGRAM</small>
-
-            <strong>BSIT-CST</strong>
-
-        </div>
-
-
-        <div>
-
-            <small>SEMESTER</small>
-
-            <strong>1st Semester</strong>
+            <div>
+                <strong>Semester</strong>
+                <p>1st Semester</p>
+            </div>
 
         </div>
 
-
-        <div>
-
-            <small>STATUS</small>
-
-            <span class="status">IRREGULAR</span>
-
-        </div>
-
-    </section>
-
-
-    <section class="content-section">
 
         <div class="section-heading">
 
             <div>
 
-                <span class="section-label">AVAILABLE SUBJECTS</span>
+                <span class="section-label">
+                    AVAILABLE SUBJECTS
+                </span>
 
-                <h2>Recommended subjects</h2>
+                <h2>Subject Listing</h2>
 
             </div>
 
             <p>
-                6 subjects available
+                Select and review the subjects listed below.
             </p>
 
         </div>
 
 
-        <div class="subject-table">
+        <div class="table-container">
 
-            <div class="table-header">
+            <table>
 
-                <span>CODE</span>
+                <thead>
 
-                <span>SUBJECT</span>
+                    <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Units</th>
+                    </tr>
 
-                <span>UNITS</span>
+                </thead>
 
-                <span>SCHEDULE</span>
+                <tbody>
 
-                <span>STATUS</span>
+                    <?php foreach ($subjects as $subject): ?>
 
-            </div>
+                        <tr>
 
+                            <td>
+                                <?= esc($subject['code']) ?>
+                            </td>
 
-            <div class="subject-row">
+                            <td>
+                                <?= esc($subject['name']) ?>
+                            </td>
 
-                <strong>IT0035</strong>
+                            <td>
+                                <?= esc($subject['units']) ?>
+                            </td>
 
-                <span>
-                    <b>Applied Operating System</b>
-                    <small>Major Subject</small>
-                </span>
+                        </tr>
 
-                <span>3</span>
+                    <?php endforeach; ?>
 
-                <span>Mon / Wed<br>10:00 AM – 11:30 AM</span>
+                </tbody>
 
-                <span class="available">Available</span>
+                <tfoot>
 
-            </div>
+                    <tr>
 
+                        <th colspan="2">
+                            Total Units
+                        </th>
 
-            <div class="subject-row">
+                        <th>
+                            <?= esc($totalUnits) ?>
+                        </th>
 
-                <strong>IT0037</strong>
+                    </tr>
 
-                <span>
-                    <b>Sytem Analysis Design</b>
-                    <small>Major Subject</small>
-                </span>
+                </tfoot>
 
-                <span>3</span>
-
-                <span>Tue / Thu<br>1:00 PM – 2:30 PM</span>
-
-                <span class="available">Available</span>
-
-            </div>
-
-
-            <div class="subject-row">
-
-                <strong>IT0015</strong>
-
-                <span>
-                    <b>Networking 2</b>
-                    <small>Major Subject</small>
-                </span>
-
-                <span>3</span>
-
-                <span>Mon / Thu<br>3:00 PM – 4:30 PM</span>
-
-                <span class="available">Available</span>
-
-            </div>
-
-
-            <div class="subject-row">
-
-                <strong>GED0083</strong>
-
-                <span>
-                    <b>College Physics 2</b>
-                    <small>Major Subject</small>
-                </span>
-
-                <span>3</span>
-
-                <span>Tue / Fri<br>9:00 AM – 10:30 AM</span>
-
-                <span class="available">Available</span>
-
-            </div>
-
-
-            <div class="subject-row">
-
-                <strong>IT0019</strong>
-
-                <span>
-                    <b>Quantitative Methods</b>
-                    <small>Major Subject</small>
-                </span>
-
-                <span>3</span>
-
-                <span>Wed / Fri<br>11:30 AM – 1:00 PM</span>
-
-                <span class="available">Available</span>
-
-            </div>
-
-
-            <div class="subject-row">
-
-                <strong>IT0204</strong>
-
-                <span>
-                    <b>It Specialization 7</b>
-                    <small>Major Subject</small>
-                </span>
-
-                <span>2</span>
-
-                <span>Saturday<br>8:00 AM – 10:00 AM</span>
-
-                <span class="available">Available</span>
-
-            </div>
+            </table>
 
         </div>
 
 
-        <div class="enrollment-total">
+        <div class="announcement">
 
             <div>
 
-                <small>TOTAL UNITS</small>
+                <span class="section-label">
+                    ENROLLMENT REMINDER
+                </span>
 
-                <strong>17 Units</strong>
+                <h2>Review your subjects carefully.</h2>
+
+                <p>
+                    Please check the subject codes, names, and units
+                    before completing your enrollment.
+                </p>
 
             </div>
 
-            <button class="btn-primary" onclick="alert('Enrollment review completed successfully!')">
+            <button
+                class="btn-primary"
+                onclick="alert('Your subject list has been reviewed.')"
+            >
                 Review Enrollment
             </button>
 
@@ -270,11 +195,17 @@
 <footer>
 
     <div>
+
         <strong>FEU Student Portal</strong>
+
         <p>Academic Enrollment System</p>
+
     </div>
 
-    <p>© 2026 Student Portal. For academic demonstration purposes.</p>
+    <p>
+        © 2026 Student Portal.
+        For academic demonstration purposes.
+    </p>
 
 </footer>
 

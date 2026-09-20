@@ -16,7 +16,49 @@ class Home extends BaseController
 
     public function enrollment()
     {
-        return view('enrollment');
+        $subjects = [
+            [
+                'code' => 'CCS001',
+                'name' => 'Introduction to Computing',
+                'units' => 3
+            ],
+            [
+                'code' => 'CCS002',
+                'name' => 'Web Development',
+                'units' => 3
+            ],
+            [
+                'code' => 'CCS003',
+                'name' => 'Database Management',
+                'units' => 3
+            ],
+            [
+                'code' => 'CCS004',
+                'name' => 'Cybersecurity Fundamentals',
+                'units' => 3
+            ],
+            [
+                'code' => 'CCS005',
+                'name' => 'Programming Concepts',
+                'units' => 3
+            ],
+            [
+                'code' => 'CCS006',
+                'name' => 'Information Assurance',
+                'units' => 2
+            ]
+        ];
+
+        $totalUnits = 0;
+
+        foreach ($subjects as $subject) {
+            $totalUnits += $subject['units'];
+        }
+
+        return view('enrollment', [
+            'subjects' => $subjects,
+            'totalUnits' => $totalUnits
+        ]);
     }
 
     public function profile()
