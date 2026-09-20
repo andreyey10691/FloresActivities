@@ -1,44 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>POS System - About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | FEU Student Portal</title>
+
     <link rel="stylesheet" href="<?= base_url('style.css') ?>">
 </head>
+
 <body>
 
-    <div class="container">
+<header class="navbar">
 
-        <nav>
-            <a href="<?= base_url('/') ?>">Home</a>
-            <a href="<?= base_url('about') ?>">About</a>
-            <a href="<?= base_url('customers') ?>">Customer Accounts</a>
-            <a href="<?= base_url('users') ?>">User Accounts</a>
-        </nav>
+    <div class="logo">
+        <span class="logo-icon">F</span>
 
-        <div class="welcome">
-            <h1>About the System</h1>
+        <div>
+            <h2>FEU</h2>
+            <small>Student Portal</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="<?= base_url('/') ?>">Home</a>
+        <a href="<?= base_url('about') ?>" class="active">About</a>
+        <a href="<?= base_url('customers') ?>">Enrollment</a>
+        <a href="<?= base_url('users') ?>">Profile</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="page-header">
+
+        <span class="section-label">ABOUT THE PORTAL</span>
+
+        <h1>Academic services in one place.</h1>
+
+        <p>
+            The FEU Student Portal is a simple web-based academic
+            interface designed to help students access important
+            enrollment and student information.
+        </p>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="info-card large">
+
+            <span class="section-label">PURPOSE</span>
+
+            <h2>Designed around the student experience.</h2>
 
             <p>
-                This Point-of-Sale Management System is a simple web-based
-                application designed to organize customer and user account
-                information.
+                This portal provides a simple way for students to review
+                their academic information, check available subjects,
+                and prepare for enrollment.
             </p>
 
             <p>
-                The project uses CodeIgniter 4 and follows the basic
-                Model-View-Controller approach. It demonstrates how routes,
-                controllers, and views work together to display information
-                through different pages.
+                The system demonstrates how a student enrollment interface
+                can be organized using a clean and accessible web design.
             </p>
 
-            <p>
-                For this version of the system, sample data is stored using
-                static PHP arrays. A database can be integrated in future
-                development as the system becomes more advanced.
-            </p>
         </div>
 
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <div class="number">01</div>
+
+                <h3>Simple Navigation</h3>
+
+                <p>
+                    Important student services are organized into clear
+                    sections for easier access.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="number">02</div>
+
+                <h3>Enrollment Support</h3>
+
+                <p>
+                    Students can review subjects and enrollment details
+                    before completing their academic preparation.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="number">03</div>
+
+                <h3>Student Information</h3>
+
+                <p>
+                    Basic academic and student information can be viewed
+                    through the profile section.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="announcement">
+
+        <div>
+
+            <span class="section-label">REMINDER</span>
+
+            <h2>Review before you enroll.</h2>
+
+            <p>
+                Check your subjects, schedule, and student information
+                before proceeding with your enrollment.
+            </p>
+
+        </div>
+
+        <a href="<?= base_url('customers') ?>" class="btn-primary">
+            Go to Enrollment
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>FEU Student Portal</strong>
+        <p>Academic Enrollment System</p>
     </div>
+
+    <p>© 2026 Student Portal. For academic demonstration purposes.</p>
+
+</footer>
 
 </body>
 </html>
