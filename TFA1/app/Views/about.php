@@ -1,158 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?= view('layout/header', ['title' => 'About', 'page' => 'about']) ?>
 
-    <title>About | FEU Student Portal</title>
+<section class="page-hero">
+    <div>
+        <span class="eyebrow">ABOUT THE SYSTEM</span>
+        <h1>Built for a better student experience.</h1>
+        <p>
+            This website provides a simple and organized way to present
+            student and academic information.
+        </p>
+    </div>
+</section>
 
-    <link rel="stylesheet" href="<?= base_url('style.css') ?>">
-</head>
-
-<body>
-
-<header class="navbar">
-
-    <div class="logo">
-        <span class="logo-icon">F</span>
-
-        <div>
-            <h2>FEU</h2>
-            <small>Student Portal</small>
-        </div>
+<section class="about-section">
+    <div class="about-image">
+        <img src="<?= base_url('images/classroom.jpg') ?>" alt="FEU Tech Classroom">
     </div>
 
-    <nav>
-        <a href="<?= base_url('/') ?>">Home</a>
-        <a href="<?= base_url('about') ?>" class="active">About</a>
-        <a href="<?= base_url('customers') ?>">Enrollment</a>
-        <a href="<?= base_url('users') ?>">Profile</a>
-    </nav>
-
-</header>
-
-
-<main>
-
-    <section class="page-header">
-
-        <span class="section-label">ABOUT THE PORTAL</span>
-
-        <h1>Academic services in one place.</h1>
+    <div class="about-content">
+        <span class="eyebrow">FEU INSTITUTE OF TECHNOLOGY</span>
+        <h2>Technology meets education.</h2>
 
         <p>
-            The FEU Student Portal is a simple web-based academic
-            interface designed to help students access important
-            enrollment and student information.
+            FEU Institute of Technology provides a learning environment
+            focused on technology, innovation, and practical skills.
         </p>
 
-    </section>
+        <p>
+            This student website was created as a simple information
+            system interface that demonstrates routing, controllers,
+            views, and organized static data using CodeIgniter.
+        </p>
 
-
-    <section class="content-section">
-
-        <div class="info-card large">
-
-            <span class="section-label">PURPOSE</span>
-
-            <h2>Designed around the student experience.</h2>
-
-            <p>
-                This portal provides a simple way for students to review
-                their academic information, check available subjects,
-                and prepare for enrollment.
-            </p>
-
-            <p>
-                The system demonstrates how a student enrollment interface
-                can be organized using a clean and accessible web design.
-            </p>
-
-        </div>
-
-
-        <div class="info-grid">
-
-            <div class="info-card">
-
-                <div class="number">01</div>
-
-                <h3>Simple Navigation</h3>
-
-                <p>
-                    Important student services are organized into clear
-                    sections for easier access.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <div class="number">02</div>
-
-                <h3>Enrollment Support</h3>
-
-                <p>
-                    Students can review subjects and enrollment details
-                    before completing their academic preparation.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <div class="number">03</div>
-
-                <h3>Student Information</h3>
-
-                <p>
-                    Basic academic and student information can be viewed
-                    through the profile section.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="announcement">
-
-        <div>
-
-            <span class="section-label">REMINDER</span>
-
-            <h2>Review before you enroll.</h2>
-
-            <p>
-                Check your subjects, schedule, and student information
-                before proceeding with your enrollment.
-            </p>
-
-        </div>
-
-        <a href="<?= base_url('customers') ?>" class="btn-primary">
-            Go to Enrollment
+        <a href="<?= base_url('enrollment') ?>" class="btn-primary">
+            Explore Enrollment
         </a>
+    </div>
+</section>
 
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div>
-        <strong>FEU Student Portal</strong>
-        <p>Academic Enrollment System</p>
+<section class="info-cards">
+    <div class="info-card">
+        <span>01</span>
+        <h3>Simple</h3>
+        <p>Information is presented in a clean and easy-to-understand layout.</p>
     </div>
 
-    <p>© 2026 Student Portal. For academic demonstration purposes.</p>
+    <div class="info-card">
+        <span>02</span>
+        <h3>Organized</h3>
+        <p>Different sections are separated into dedicated pages for easier navigation.</p>
+    </div>
 
-</footer>
+    <div class="info-card">
+        <span>03</span>
+        <h3>Responsive</h3>
+        <p>The interface is designed to work across laptops, tablets, and mobile devices.</p>
+    </div>
+</section>
 
-</body>
-</html>
+<?= view('layout/footer') ?>

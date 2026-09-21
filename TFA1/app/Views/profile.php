@@ -1,213 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?= view('layout/header', ['title' => 'Profile', 'page' => 'profile']) ?>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="profile-hero">
+    <div class="profile-hero-bg"></div>
 
-    <title>Student Profile | FEU Student Portal</title>
-
-  <link rel="stylesheet" href="<?= base_url('style.css') ?>">
-
-</head>
-
-<body>
-
-<header class="navbar">
-
-    <div class="logo">
-
-        <span class="logo-icon">F</span>
+    <div class="profile-hero-content">
+        <div class="profile-avatar">KJ</div>
 
         <div>
-            <h2>FEU</h2>
-            <small>Student Portal</small>
-        </div>
+            <span class="section-label light-label">STUDENT PROFILE</span>
+            <h1>Kendall Jenner</h1>
+            <p>BSIT-CST · 3rd Year · TC32</p>
 
+            <div class="profile-status">
+                <span></span>
+                Active Student
+            </div>
+        </div>
     </div>
 
+    <div class="profile-hero-mark">
+        <strong>FEU</strong>
+        <span>TECH</span>
+    </div>
+</section>
 
-    <nav>
+<section class="profile-wrapper">
 
-        <a href="<?= base_url('/') ?>">Home</a>
-
-        <a href="<?= base_url('about') ?>">About</a>
-
-        <a href="<?= base_url('customers') ?>">Enrollment</a>
-
-        <a href="<?= base_url('users') ?>" class="active">
-            Profile
-        </a>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-    <section class="page-header">
-
-        <span class="section-label">STUDENT PROFILE</span>
-
-        <h1>Your student information.</h1>
-
-        <p>
-            Review the basic information associated with your student
-            account.
-        </p>
-
-    </section>
-
-
-    <section class="profile-layout">
-
-
-        <div class="profile-card">
-
-            <div class="profile-avatar">
-                AF
-            </div>
-
-            <h2>Lee Andrei A. Flores</h2>
-
-            <p>BS Information Technology</p>
-
-            <span class="status">
-                ACTIVE STUDENT
-            </span>
-
-            <div class="profile-line"></div>
-
-            <small>STUDENT NUMBER</small>
-
-            <strong>202410691</strong>
-
+    <div class="profile-intro">
+        <div>
+            <span class="section-label">STUDENT INFORMATION</span>
+            <h2>Your Academic Profile</h2>
+            <p>
+                A centralized view of your student information,
+                academic details, and account status.
+            </p>
         </div>
 
+        <div class="profile-id-card">
+            <small>STUDENT ID</small>
+            <strong>••••1069</strong>
+        </div>
+    </div>
 
-        <div class="details-card">
+    <div class="profile-grid">
 
-            <div class="details-header">
+        <div class="profile-card personal-card">
+            <div class="card-heading">
+                <div class="card-icon">01</div>
 
                 <div>
+                    <span>PERSONAL INFORMATION</span>
+                    <h3>Basic Details</h3>
+                </div>
+            </div>
 
-                    <span class="section-label">PERSONAL INFORMATION</span>
+            <div class="profile-details">
 
-                    <h2>Student Details</h2>
+                <div class="detail-row">
+                    <span>FULL NAME</span>
+                    <strong>Kendall Jenner</strong>
+                </div>
 
+                <div class="detail-row">
+                    <span>STUDENT ID</span>
+                    <strong>••••1069</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>EMAIL ADDRESS</span>
+                    <strong>kendalljenner@fit.edu.ph</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>CONTACT NUMBER</span>
+                    <strong>•••••••12</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>DATE OF BIRTH</span>
+                    <strong>•• / •• / ••••</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>ACCOUNT STATUS</span>
+                    <strong class="green-text">Active Student</strong>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="profile-card security-card">
+            <div class="card-heading">
+                <div class="card-icon">02</div>
+
+                <div>
+                    <span>ACCOUNT</span>
+                    <h3>Account Security</h3>
+                </div>
+            </div>
+
+            <div class="security-box">
+                <div class="security-symbol">✓</div>
+
+                <div>
+                    <strong>Account Protected</strong>
+                    <p>Your account information is secured and partially masked.</p>
+                </div>
+            </div>
+
+            <div class="profile-details">
+
+                <div class="detail-row">
+                    <span>EMAIL</span>
+                    <strong>kendalljenner@fit.edu.ph</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>PASSWORD</span>
+                    <strong>••••••••••••</strong>
                 </div>
 
             </div>
 
+            <a href="#" class="profile-action">
+                Manage Account
+                <span>→</span>
+            </a>
+        </div>
 
-            <div class="details-grid">
+    </div>
 
-                <div class="detail">
+    <div class="academic-profile-section">
 
-                    <small>FULL NAME</small>
-
-                    <strong>Lee Andrei A. Flores</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>PROGRAM</small>
-
-                    <strong>BSIT-CST</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>YEAR LEVEL</small>
-
-                    <strong>3rd Year</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>SECTION</small>
-
-                    <strong>TC32
-
-                    </strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>SEMESTER</small>
-
-                    <strong>1st Semester</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>ACADEMIC YEAR</small>
-
-                    <strong>2026–2027</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>STUDENT STATUS</small>
-
-                    <strong class="green-text">Active</strong>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <small>ACCOUNT STATUS</small>
-
-                    <strong class="green-text">Verified</strong>
-
-                </div>
-
+        <div class="academic-heading">
+            <div>
+                <span class="section-label">ACADEMIC INFORMATION</span>
+                <h2>Student Academic Profile</h2>
             </div>
 
+            <div class="academic-badge">
+                <span></span>
+                Currently Enrolled
+            </div>
+        </div>
 
-            <div class="profile-notice">
+        <div class="academic-grid">
 
-                <strong>Account Information</strong>
+            <div class="academic-item">
+                <span>PROGRAM</span>
+                <strong>BSIT-CST</strong>
+                <p>Bachelor of Science in Information Technology</p>
+            </div>
 
-                <p>
-                    Your student account is currently active. Please make
-                    sure that your information is correct before proceeding
-                    with enrollment.
-                </p>
+            <div class="academic-item">
+                <span>MAJOR / TRACK</span>
+                <strong>Cybersecurity</strong>
+                <p>Cybersecurity-focused studies</p>
+            </div>
 
+            <div class="academic-item">
+                <span>YEAR LEVEL</span>
+                <strong>3rd Year</strong>
+                <p>Current academic level</p>
+            </div>
+
+            <div class="academic-item">
+                <span>SECTION</span>
+                <strong>TC32</strong>
+                <p>Current class section</p>
             </div>
 
         </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div>
-        <strong>FEU Student Portal</strong>
-        <p>Academic Enrollment System</p>
     </div>
 
-    <p>© 2026 Student Portal. For academic demonstration purposes.</p>
+    <div class="profile-bottom">
 
-</footer>
+        <div class="profile-message">
+            <div class="message-icon">✓</div>
 
-</body>
-</html>
+            <div>
+                <strong>Privacy-conscious profile</strong>
+                <p>
+                    Selected personal identifiers are masked to reduce
+                    unnecessary exposure of sensitive information.
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-date">
+            <span>RECORD STATUS</span>
+            <strong>ACTIVE</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="profile-campus">
+    <div class="campus-image">
+        <img src="<?= base_url('images/feu-building.jpg') ?>" alt="FEU Institute of Technology">
+    </div>
+
+    <div class="campus-content">
+        <span class="section-label">FEU INSTITUTE OF TECHNOLOGY</span>
+
+        <h2>Where technology<br>meets <strong>possibility.</strong></h2>
+
+        <p>
+            A student-centered environment where technology,
+            innovation, and education come together.
+        </p>
+
+        <a href="<?= base_url('about') ?>" class="gold-button">
+            Discover FEU Tech <span>→</span>
+        </a>
+    </div>
+</section>
+
+<?= view('layout/footer') ?>

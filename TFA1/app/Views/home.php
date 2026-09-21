@@ -1,381 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?= view('layout/header', ['title' => 'Home', 'page' => 'home']) ?>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FEU Student Portal</title>
-
-    <link rel="stylesheet" href="<?= base_url('style.css') ?>">
-
-</head>
-
-<body>
-
-
-<!-- NAVIGATION -->
-
-<header class="navbar">
-
-    <div class="logo">
-
-        <span class="logo-icon">F</span>
-
-        <div>
-            <h2>FEU</h2>
-            <small>Student Portal</small>
-        </div>
-
+<section class="hero">
+    <div class="hero-image">
+        <img src="<?= base_url('images/feu-building.jpg') ?>" alt="FEU Institute of Technology">
     </div>
 
-
-    <nav>
-
-        <a href="<?= base_url('/') ?>" class="active">
-            Home
-        </a>
-
-        <a href="<?= base_url('about') ?>">
-            About
-        </a>
-
-        <a href="<?= base_url('customers') ?>">
-            Enrollment
-        </a>
-
-        <a href="<?= base_url('users') ?>">
-            Profile
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- MAIN CONTENT -->
-
-<main>
-
-
-    <!-- HERO SECTION -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <span class="welcome-label">
-                STUDENT ACADEMIC PORTAL
-            </span>
-
-
-            <h1>
-                Your academic journey,
-                <span>made simpler.</span>
-            </h1>
-
-
-            <p>
-                Welcome to the student portal. Access enrollment services,
-                review academic information, and stay updated with
-                important announcements throughout the semester.
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="<?= base_url('customers') ?>"
-                    class="btn-primary"
-                >
-                    Start Enrollment
-                </a>
-
-
-                <a
-                    href="<?= base_url('about') ?>"
-                    class="btn-outline"
-                >
-                    Learn More
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT SIDE PORTAL CARD -->
-
-        <div class="hero-card">
-
-            <span class="section-label">
-                STUDENT ACADEMIC PORTAL
-            </span>
-
-
-            <h2>
-                Stay on track with your academic journey.
-            </h2>
-
-
-            <p>
-                Keep up with enrollment schedules, academic requirements,
-                and important updates throughout the semester.
-            </p>
-
-
-
-            <div class="portal-message">
-
-                <strong>
-                    Enrollment is now open.
-                </strong>
-
-                <p>
-                    Review your available subjects and prepare your
-                    class schedule before completing your enrollment.
-                </p>
-
-            </div>
-
-
-
-            <div class="portal-links">
-
-                <a href="<?= base_url('customers') ?>">
-
-                    <span>
-                        View Available Subjects
-                    </span>
-
-                    <span>→</span>
-
-                </a>
-
-
-                <a href="<?= base_url('about') ?>">
-
-                    <span>
-                        Read Enrollment Guide
-                    </span>
-
-                    <span>→</span>
-
-                </a>
-
-
-                <a href="<?= base_url('users') ?>">
-
-                    <span>
-                        Check Student Information
-                    </span>
-
-                    <span>→</span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- SERVICES -->
-
-    <section class="section">
-
-
-        <div class="section-heading">
-
-            <div>
-
-                <span class="section-label">
-                    STUDENT SERVICES
-                </span>
-
-                <h2>
-                    Everything you need in one place.
-                </h2>
-
-            </div>
-
-
-            <p>
-                Access the essential services you need to prepare
-                for the upcoming academic semester.
-            </p>
-
-        </div>
-
-
-
-        <div class="service-grid">
-
-
-            <!-- ENROLLMENT -->
-
-            <a
-                href="<?= base_url('customers') ?>"
-                class="service-card"
-            >
-
-                <div class="service-icon">
-                    01
-                </div>
-
-
-                <h3>
-                    Enrollment
-                </h3>
-
-
-                <p>
-                    Browse available subjects, review class schedules,
-                    and prepare your enrollment for the semester.
-                </p>
-
-
-                <span class="card-link">
-                    View Enrollment →
-                </span>
-
-            </a>
-
-
-
-            <!-- PROFILE -->
-
-            <a
-                href="<?= base_url('users') ?>"
-                class="service-card"
-            >
-
-                <div class="service-icon">
-                    02
-                </div>
-
-
-                <h3>
-                    Student Profile
-                </h3>
-
-
-                <p>
-                    Review your program, year level, section,
-                    semester, and other basic academic information.
-                </p>
-
-
-                <span class="card-link">
-                    View Profile →
-                </span>
-
-            </a>
-
-
-
-            <!-- INFORMATION -->
-
-            <a
-                href="<?= base_url('about') ?>"
-                class="service-card"
-            >
-
-                <div class="service-icon">
-                    03
-                </div>
-
-
-                <h3>
-                    Academic Information
-                </h3>
-
-
-                <p>
-                    Find useful information about enrollment procedures,
-                    academic reminders, and student services.
-                </p>
-
-
-                <span class="card-link">
-                    Learn More →
-                </span>
-
-            </a>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ANNOUNCEMENT -->
-
-    <section class="announcement">
-
-        <div>
-
-            <span class="section-label">
-                IMPORTANT REMINDER
-            </span>
-
-
-            <h2>
-                Prepare before you enroll.
-            </h2>
-
-
-            <p>
-                Review your available subjects and make sure you understand
-                your class schedule before proceeding with enrollment.
-            </p>
-
-        </div>
-
-
-        <a
-            href="<?= base_url('customers') ?>"
-            class="btn-primary"
-        >
-            Review Subjects
-        </a>
-
-    </section>
-
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div>
-
-        <strong>
-            FEU Student Portal
-        </strong>
-
+    <div class="hero-content">
+        <span class="eyebrow">FEU INSTITUTE OF TECHNOLOGY</span>
+        <h1>Technology, Innovation, and Excellence.</h1>
         <p>
-            Academic Enrollment System
+            Welcome to the FEU Tech student information website.
+            Explore enrollment information, student records, users, and
+            other academic resources in one place.
         </p>
 
+        <div class="hero-buttons">
+            <a href="<?= base_url('enrollment') ?>" class="btn-primary">View Enrollment</a>
+            <a href="<?= base_url('about') ?>" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="home-section">
+    <div class="section-heading">
+        <span class="eyebrow">STUDENT PORTAL</span>
+        <h2>Everything in one place.</h2>
+        <p>
+            Access important student information through a clean and organized interface.
+        </p>
     </div>
 
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">01</div>
+            <h3>Enrollment</h3>
+            <p>View available courses and enrollment information.</p>
+            <a href="<?= base_url('enrollment') ?>">View Enrollment →</a>
+        </div>
 
-    <p>
-        © 2026 Student Portal.
-        For academic demonstration purposes.
-    </p>
+        <div class="feature-card">
+            <div class="feature-icon">02</div>
+            <h3>Customers</h3>
+            <p>View organized customer information through the system.</p>
+            <a href="<?= base_url('customers') ?>">View Customers →</a>
+        </div>
 
-</footer>
+        <div class="feature-card">
+            <div class="feature-icon">03</div>
+            <h3>Users</h3>
+            <p>Explore the registered users available in the system.</p>
+            <a href="<?= base_url('users') ?>">View Users →</a>
+        </div>
+    </div>
+</section>
 
+<section class="image-section">
+    <div class="image-section-content">
+        <span class="eyebrow">FEU TECH</span>
+        <h2>Learning beyond the classroom.</h2>
+        <p>
+            A technology-focused learning environment designed to prepare
+            students for the future of the digital world.
+        </p>
+    </div>
 
-</body>
-</html>
+    <div class="image-section-photo">
+        <img src="<?= base_url('images/classroom.jpg') ?>" alt="FEU Tech Classroom">
+    </div>
+</section>
+
+<?= view('layout/footer') ?>
