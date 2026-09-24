@@ -3,12 +3,12 @@
 <footer class="footer">
     <div class="footer-container">
         <div>
-            <h3>FEU Institute of Technology</h3>
-            <p>Technology, Innovation, and Excellence.</p>
+            <h3></h3>
+            <p></p>
         </div>
 
         <div class="footer-right">
-            <p>© <?= date('Y') ?> FEU Tech Student Website</p>
+            <p>© <?= date('Y') ?> Lee Andrei Flores</p>
         </div>
     </div>
 </footer>
