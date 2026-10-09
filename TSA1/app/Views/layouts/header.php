@@ -12,7 +12,7 @@
         <div class="container nav-container">
             <h2>Tasks for Today</h2>
             <nav>
-                <a href="<?= site_url('/') ?>">Home</a>
+                <a href="<?= base_url('/') ?>">Home</a>
                 <a href="<?= site_url('tasks') ?>">Tasks</a>
                 <a href="<?= site_url('profile') ?>">Profile</a>
                 <a href="<?= site_url('about') ?>">About</a>
