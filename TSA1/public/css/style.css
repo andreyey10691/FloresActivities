@@ -1,0 +1,158 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #263238;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    background: #176b45;
+    color: white;
+    padding: 18px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-container h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f2d36b;
+}
+
+main {
+    min-height: 75vh;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    color: #176b45;
+    margin-bottom: 8px;
+}
+
+.date {
+    color: #666;
+}
+
+.task-list {
+    display: grid;
+    gap: 15px;
+}
+
+.task-card,
+.profile-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.task-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.task-card p,
+.profile-card p {
+    color: #555;
+}
+
+.status {
+    background: #e4f3e9;
+    color: #176b45;
+    padding: 7px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #176b45;
+    color: white;
+}
+
+tr:hover td {
+    background: #f7faf8;
+}
+
+.footer {
+    background: #176b45;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
